@@ -135,7 +135,7 @@
         _orientationMouseDown: false,
         _savedDragging: false,
         _savedMouseUp: false,
-        validOrientation: function() {
+        validateOrientation: function(callback) {
             if (!this._orientationLine) {
                 return this;
             }
