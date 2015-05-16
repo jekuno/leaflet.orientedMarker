@@ -62,7 +62,8 @@
             that._orientationMouseDown = false;
             that._orientationLine.addTo(that._map);
             that._orientationCircle.addTo(that._map);
-            (that._orientationLine, that._orientationCircle).on('mousedown', beginOrientation);
+            that._orientationLine.on('mousedown', beginOrientation);
+			that._orientationCircle.on('mousedown', beginOrientation);
             that._map.on('mousemove', moveOrientation);
             document.onmouseup = stopOrientation;
             // Mobile controls
