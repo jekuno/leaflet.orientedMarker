@@ -63,7 +63,7 @@
             that._orientationLine.addTo(that._map);
             that._orientationCircle.addTo(that._map);
             that._orientationLine.on('mousedown', beginOrientation);
-			that._orientationCircle.on('mousedown', beginOrientation);
+            that._orientationCircle.on('mousedown', beginOrientation);
             that._map.on('mousemove', moveOrientation);
             document.onmouseup = stopOrientation;
             // Mobile controls
@@ -136,11 +136,14 @@
         _savedDragging: false,
         _savedMouseUp: false,
         validOrientation: function() {
+            if (!this._orientationLine) {
+                return this;
+            }
             this._map.dragging = this._savedDragging;
             document.onmouseup = this._savedMouseUp;
             this._orientationLine.onRemove(this._map);
             this._orientationCircle.onRemove(this._map);
-			this._orientationLine = false;
+            this._orientationLine = false;
             this._orientationCircle = false;
             return this;
         },
