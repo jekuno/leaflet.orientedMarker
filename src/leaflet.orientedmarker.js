@@ -140,6 +140,8 @@
             document.onmouseup = this._savedMouseUp;
             this._orientationLine.onRemove(this._map);
             this._orientationCircle.onRemove(this._map);
+			this._orientationLine = false;
+            this._orientationCircle = false;
             return this;
         },
         _setAngle: function() {
