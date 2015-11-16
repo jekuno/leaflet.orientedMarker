@@ -17,7 +17,7 @@
             this._initIconStyle = this._icon.style[L.DomUtil.TRANSFORM] + '';
             this._updateImg();
         },
-        _updateImg: function(i, a, s) {
+        _updateImg: function() {
             var a = this.options.icon.options.iconAnchor,
             i, s;
             if (this._icon) {
